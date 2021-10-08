@@ -1,10 +1,7 @@
-import { registerPlugin } from '@capacitor/core';
-
-import { SafeAreaPlugin } from './definitions';
-
-const SafeAreaPlugin = registerPlugin<SafeAreaPlugin>('SafeAreaPlugin', {
-  web: () => import('./web').then(m => new m.SafeAreaPluginWeb()),
-});
+import SafeAreaController from './controller';
 
 export * from './definitions';
-export { SafeAreaPlugin };
+
+const controller = new SafeAreaController();
+
+export { controller as SafeAreaController };

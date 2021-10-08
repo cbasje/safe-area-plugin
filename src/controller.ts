@@ -1,11 +1,11 @@
 import type { PluginListenerHandle } from '@capacitor/core';
 import { Capacitor } from '@capacitor/core';
 
-import { SafeAreaPlugin } from './';
 import type {
   SafeAreaInsets,
   SafeAreaInsetsChangedCallback,
 } from './definitions';
+import { SafeAreaPlugin } from './web';
 
 class SafeAreaController {
   private callback: PluginListenerHandle | undefined;
