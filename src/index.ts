@@ -1,8 +1,8 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { SafeAreaPluginPlugin } from './definitions';
+import { SafeAreaPlugin } from './definitions';
 
-const SafeAreaPlugin = registerPlugin<SafeAreaPluginPlugin>('SafeAreaPlugin', {
+const SafeAreaPlugin = registerPlugin<SafeAreaPlugin>('SafeAreaPlugin', {
   web: () => import('./web').then(m => new m.SafeAreaPluginWeb()),
 });
 
